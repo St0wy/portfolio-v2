@@ -1,10 +1,10 @@
 ---
-import { BlogSchema } from "../content/config";
+import { ProjectSchema } from "../content/config";
 import BaseLayout from "./BaseLayout.astro";
 import dayjs from "dayjs";
 import localizedFormat from "dayjs/plugin/localizedFormat";
 
-export interface Props extends BlogSchema {}
+export interface Props extends ProjectSchema {}
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 dayjs.extend(localizedFormat);

@@ -1,7 +1,7 @@
 ---
 import { CollectionEntry, getCollection } from "astro:content";
-import { BlogSchema } from "../../content/config";
-import PostLayout from "../../layouts/PostLayout.astro";
+import { ProjectSchema } from "../../content/config";
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
 
 export async function getStaticPaths() {
 	const projectEntries = await getCollection("projects");
@@ -16,16 +16,16 @@ interface Props {
 }
 
 const { entry } = Astro.props;
-const post: BlogSchema = entry.data;
+const project: ProjectSchema = entry.data;
 const { Content } = await entry.render();
 ---
 
-<PostLayout
-	title={post.title}
-	description={post.description}
-	pubDate={post.pubDate}
-	heroImage={post.heroImage}
-	updatedDate={post.updatedDate}
+<ProjectLayout
+	title={project.title}
+	description={project.description}
+	pubDate={project.pubDate}
+	heroImage={project.heroImage}
+	updatedDate={project.updatedDate}
 >
 	<Content />
-</PostLayout>
+</ProjectLayout>
