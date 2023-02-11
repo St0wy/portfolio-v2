@@ -1,0 +1,22 @@
+---
+export interface Props {
+	screenshots?: string[];
+	containerClasses?: string;
+	imageClasses?: string;
+}
+
+const {
+	screenshots = [],
+	containerClasses = "flex flex-wrap justify-around",
+	imageClasses = "w-72",
+} = Astro.props as Props;
+---
+
+<div class={containerClasses}>
+	{
+		screenshots.map(
+			(screenshot) =>
+				screenshot && <img src={screenshot} class={imageClasses} />
+		)
+	}
+</div>

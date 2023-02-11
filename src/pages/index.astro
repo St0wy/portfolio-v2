@@ -4,7 +4,7 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
 
 const projects = (await getCollection("projects")).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+	(a, b) => a.data.order.valueOf() - b.data.order.valueOf()
 );
 
 const last_projects = projects.slice(0, 3);

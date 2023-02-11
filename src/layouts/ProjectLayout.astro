@@ -6,9 +6,9 @@ import localizedFormat from "dayjs/plugin/localizedFormat";
 
 export interface Props extends ProjectSchema {}
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, creationDate, order, heroImage } = Astro.props;
 dayjs.extend(localizedFormat);
-const displayDate = dayjs(pubDate).format("ll");
+const displayDate = dayjs(creationDate).format("MMMM YYYY");
 ---
 
 <BaseLayout title={title} description={description} image={heroImage}>
@@ -20,13 +20,14 @@ const displayDate = dayjs(pubDate).format("ll");
 				)
 			}
 			<h1 class="title my-2 text-4xl font-bold">{title}</h1>
-			{pubDate && <time>{displayDate}</time>}
 			{
-				updatedDate && (
-					<div>
-						{" "}
-						Last updated on <time>{updatedDate}</time>{" "}
-					</div>
+				creationDate && (
+					<span>
+						Created on{" "}
+						<time datetime={creationDate.toISOString()}>
+							{displayDate}
+						</time>
+					</span>
 				)
 			}
 			<div class="divider my-2"></div>
