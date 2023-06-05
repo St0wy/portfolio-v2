@@ -16,7 +16,11 @@ const {
 	{
 		screenshots.map(
 			(screenshot) =>
-				screenshot && <img src={screenshot} class={imageClasses} />
+				screenshot && (
+					<div data-lightbox="true">
+						<img src={screenshot} class={imageClasses} />
+					</div>
+				)
 		)
 	}
 </div>
