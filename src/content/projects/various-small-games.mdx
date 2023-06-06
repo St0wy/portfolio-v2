@@ -1,16 +1,38 @@
 ---
 title: "Various Small Games"
-description: "A collection of 4 games made each in 1 week. They where made during the Game Design module at SAE Institute."
+description: "A collection of 4 games made each in 1 week on Unity. They where made during the Game Design module at SAE Institute."
 creationDate: "Feb 22, 2022"
 heroImage: "/various-games/various-games.png"
 order: 5
-screenshots: []
+screenshots:
+    [
+        "/various-games/space-shooter.png",
+        "/various-games/coop-maze.png",
+        "/various-games/maze-game.png",
+        "/various-games/racing-game.png",
+    ]
 ---
 
-A collection of 4 games made each in 1 week. They where made during the Game Design module at SAE Institute.
+A collection of 4 games made each in 1 week on Unity. They where made during the Game Design module at SAE Institute.
+Each of these where made in a group of two, which was sometimes hard because not everyone had the same level on Unity.
 
 I don't think these project are particularly amazing, but considering they where each made in a week, I think it's not that bad.
 To project with the most orginality in terms of gameplay is the coop local maze game.
+
+## Space Game
+
+This is a top-down shmup where you must kill a certain amount of enemies to finish the game.
+There are two kinds of enemies and you can shoot two types of bullets.
+
+<div data-lightbox="true">
+	<img
+		class="w-2/3"
+		src="/various-games/space-shooter.png"
+		alt="A screenshot of the space game."
+	/>
+</div>
+
+You can try it in your browser on [itch.io](https://sstyles.itch.io/spacegame).
 
 ## Coop Local Maze Game
 
@@ -19,6 +41,54 @@ The twist is that you and your friend each go through a different maze, and you 
 The only source of light is located where you friend would be if he was in your maze.
 Since the mazes are different, you must cooperate by lighting the path of your friend and escape.
 
-This game was made in collaboration with Benjamin.
+<div data-lightbox="true">
+	<img
+		class="w-2/3"
+		src="/various-games/coop-maze.png"
+		alt="A screenshot of the local coop maze game."
+	/>
+</div>
 
 You can try it in your browser on [itch.io](https://stowy.itch.io/coop-local-maze-game). (Requires a controller)
+
+## Maze Game
+
+I know, I'm very original witht the names !
+
+This game was the first one we made during the module.
+It's very very simple, but it allowed us to start using Unity (although I already did some stuff with it in the past).
+
+<div data-lightbox="true">
+	<img
+		class="w-2/3"
+		src="/various-games/maze-game.png"
+		alt="A screenshot of the maze game."
+	/>
+</div>
+
+You can try it in your browser on [itch.io](https://stowy.itch.io/maze-game).
+
+## Racing Game
+
+This game is probably the least interesting one.
+I basically followed a tutorial for the car movement and the other person on the project did the map.
+
+I like the music though.
+
+<div data-lightbox="true">
+	<img
+		class="w-2/3"
+		src="/various-games/racing-game.png"
+		alt="A screenshot of the racing game."
+	/>
+</div>
+
+You can try it in your browser on [itch.io](https://stowy.itch.io/racing-game).
+
+<div class="divider my-2" />
+
+## Screenshots
+
+import ScreenshotList from "../../components/ScreenshotList.astro";
+
+<ScreenshotList screenshots={frontmatter.screenshots} />
