@@ -1,0 +1,53 @@
+---
+title: "Kamikaze"
+description: "This is the final project that I made in a group of 2 for the Game Design module at SAE Institute."
+creationDate: "April 15, 2022"
+heroImage: "/kamikaze/kamikaze.png"
+order: 7
+screenshots:
+    [
+        "/kamikaze/kamikaze.png",
+        "/kamikaze/kamikaze2.png",
+        "/kamikaze/kamikaze3.png",
+        "/kamikaze/kamikaze4.png",
+    ]
+---
+
+This project was a relatively big (for a school project).
+The idea was to create a Plant vs Zombie-like game with Kamikaze characters that explode upon reaching enemies.
+
+We developed a detailed Game Design Document (GDD) outlining the game's progression and various troop and enemy types.
+For instance, we considered a shield troop that blocks enemy advancement until it's defeated.
+To introduce more engaging enemies, we thought of a slow yet resilient enemy capable of destroying the shield in a single hit.
+Despite our efforts, the initial presentation to our teacher didn't go well as the fun factor was unclear.
+However, we received feedback to incorporate synergies between troops, leading us to introduce an ice troop that freezes enemies and increases damage, as well as an enemy vulnerable only when frozen.
+These additions significantly enhanced the enjoyment of the game.
+
+The game is playable in your browser on the Itch.io page.
+
+<div class="flex">
+    <a
+        href="https://stowy.itch.io/kamikaze"
+        target="_blank"
+        class="btn btn-outline ml-5"
+    >
+        Itch.io
+    </a>
+
+    <a
+        href="https://github.com/St0wy/GPA4300-Kamikaze"
+        target="_blank"
+        class="btn btn-outline ml-5"
+    >
+        Github Page
+    </a>
+
+</div>
+
+<div class="divider my-2" />
+
+## Screenshots
+
+import ScreenshotList from "../../components/ScreenshotList.astro";
+
+<ScreenshotList screenshots={frontmatter.screenshots} />
