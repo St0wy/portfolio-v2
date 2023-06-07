@@ -6,19 +6,6 @@ heroImage: "/physics-engine/physics-engine.png"
 order: 0
 ---
 
-import PhysicsEngineDemo from "../../components/physics_engine/PhysicsEngineDemo.astro";
-
-<PhysicsEngineDemo />
-
-{/* <div class="grid place-items-center">
-
-<video width="640" height="480" loop muted autoplay controls>
-	<source src="/physics-engine/physicsEngine.mp4" type="video/mp4" />
-	Your browser does not support the video tag.
-</video>
-
-</div> */}
-
 This is a **2D physics engine** made in **C++** with no libraries.
 It was made during the physics engine module of the SAE Institute.
 It was graded **2/20** (middlesex notation, where 1 is the best grade).
@@ -29,7 +16,13 @@ It has :
 -   [AABB](https://en.wikipedia.org/wiki/Minimum_bounding_box#Axis-aligned_minimum_bounding_box) colliders
 -   Broad phase collision detection with a grid
 
-<div class="flex">
+At first the demo scene was made in [SFML](https://www.sfml-dev.org/).
+But recently, I ported it to [raylib](https://www.raylib.com/) so that I
+could compile the projet to a web version with [Emscripten](https://emscripten.org/).
+You can left click to place circles and right click to place squares.
+(PS : You can't scroll with the cursor inside the demo, I don't know why. Sorry.)
+
+<div class="flex" style="margin-bottom: 1em;">
     <a
         href="https://stowy-physics-engine.readthedocs.io/en/latest/index.html"
         target="_blank"
@@ -48,7 +41,11 @@ It has :
 
 </div>
 
-It was even featured in 3 code review videos made by The Cherno :
+import PhysicsEngineDemo from "../../components/physics_engine/PhysicsEngineDemo.astro";
+
+<PhysicsEngineDemo />
+
+The project was also featured in 3 code review videos made by The Cherno :
 
 <div class="grid place-items-center">
 	<iframe
