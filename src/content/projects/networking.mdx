@@ -1,0 +1,53 @@
+---
+title: "Networking - Rollback Atomic Ball"
+description: "Diverse projects made during the networking module at SAE Institute. As the final project, I added rollback netcode for the game Atomic Ball."
+creationDate: "January 3, 2022"
+heroImage: "/networking/rollback-atomic-ball.png"
+order: 4
+screenshots: []
+---
+
+During the networking module at SAE Institute, we had multiple exercices to do.
+
+The first thing we had to implement was a small conversation server.
+For this, I used [Dear ImGui](https://github.com/ocornut/imgui) for the user interface
+and [SFML](https://www.sfml-dev.org/index-fr.php) to be able to use sockets.
+
+<div data-lightbox="true">
+	<img
+		class="w-2/3"
+		src="/networking/echo-server.png"
+		alt="A small chat app."
+	/>
+</div>
+
+We then had to do a turn-based game.
+I decided to implement a Tic-Tac-Toe.
+In this one I also used SFML for the graphics and not online the networking.
+
+<div data-lightbox="true">
+	<img
+		class="w-2/3"
+		src="/networking/tic-tac-toe.png"
+		alt="A small chat app."
+	/>
+</div>
+
+After that we started the big final project.
+The task was to develop a game using the rollback engine of our teacher.
+So I decided to redo [Atomic Ball](./atomic-ball) using SFML and by adding rollback to it.
+
+Using the engine was really hard, the API was really complicated and it required a lot of boilerplate code to add really simple thing.
+Also, the final game sometimes has random crashes that I wasn't able to solve.
+But in the end, I'm quite proud of the work I did and it was really interesting to learn how to do
+reliable data transfer using UDP.
+
+I wrote a blog post where I explained broadly how the online in the game works :
+[Rollback Netcode in Atomic Ball](https://blog.stowy.ch/posts/rollback-netcode-in-atomic-ball/)
+
+<div class="grid place-items-center">
+	<video width="640" height="480" loop muted autoplay controls>
+		<source src="/networking/atomicDemo.mp4" type="video/mp4" />
+		Your browser does not support the video tag.
+	</video>
+</div>
