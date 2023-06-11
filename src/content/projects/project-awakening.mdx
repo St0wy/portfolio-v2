@@ -1,0 +1,49 @@
+---
+title: "Project Awakening"
+description: "A zelda-like game made in Unity for the Procedural Generation module at SAE Institute."
+creationDate: "January 3, 2022"
+heroImage: "/project-awakening/project-awakening.png"
+order: 3
+screenshots:
+    [
+        "/project-awakening/project-awakening.png",
+        "/project-awakening/project-awakening1.png",
+        "/project-awakening/project-awakening2.png",
+        "/project-awakening/project-awakening3.png",
+        "/project-awakening/project-awakening4.png",
+    ]
+---
+
+This is a zelda-like game made in Unity for the Procedural Generation module at SAE Institute.
+
+It was made in collaboration with my classmate Némoz.
+
+He implemented the generation of the overworld an algorithm called the [Wave Function Collapse](https://en.wikipedia.org/wiki/Wave_function_collapse#Use_in_procedural_generation).
+As for the dungeons, I implemented them using the same algorithm than the one used in _The Binding of Isaac_.
+
+At the time, I wrote a blog post in french on how the dungeons are made : [La génération procédurale de The Binding of Isaac](https://blog.stowy.ch/posts/la-g%C3%A9n%C3%A9ration-proc%C3%A9durale-de-the-binding-of-isaac/).
+
+<div class="flex">
+	<a
+		href="https://stowy.itch.io/project-awakening"
+		target="_blank"
+		class="btn btn-outline ml-5"
+	>
+		Itch.io
+	</a>
+	<a
+		href="https://github.com/St0wy/GPR4400-ProjectAwakening"
+		target="_blank"
+		class="btn btn-outline ml-5"
+	>
+		Github Page
+	</a>
+</div>
+
+<div class="divider my-2" />
+
+## Screenshots
+
+import ScreenshotList from "../../components/ScreenshotList.astro";
+
+<ScreenshotList screenshots={frontmatter.screenshots} />
