@@ -6,8 +6,9 @@ import { getCollection } from "astro:content";
 const projects = (await getCollection("projects")).sort(
 	(a, b) => a.data.order.valueOf() - b.data.order.valueOf()
 );
-
-const last_projects = projects.slice(0, 3);
+const MAX_PROJECTS = 3;
+const shownProjects = projects.slice(0, MAX_PROJECTS - 1);
+const lastProject = projects[MAX_PROJECTS - 1];
 ---
 
 <BaseLayout>
@@ -37,7 +38,7 @@ const last_projects = projects.slice(0, 3);
 	</div>
 
 	{
-		last_projects.map((project) => (
+		shownProjects.map((project) => (
 			<>
 				<HorizontalCard
 					title={project.data.title}
@@ -50,4 +51,18 @@ const last_projects = projects.slice(0, 3);
 			</>
 		))
 	}
+	{
+		(
+			<HorizontalCard
+				title={lastProject.data.title}
+				img={lastProject.data.heroImage}
+				desc={lastProject.data.description}
+				url={"/projects/" + lastProject.slug}
+				target="_self"
+			/>
+		)
+	}
+	<div class="mt-8">
+		<a class="btn" href="/projects">See more...</a>
+	</div>
 </BaseLayout>
