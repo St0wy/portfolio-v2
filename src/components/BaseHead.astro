@@ -13,13 +13,13 @@ export interface Props {
 const { title, description, image = "/social_img.png" } = Astro.props;
 ---
 
-<Lightbox />
-
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 <meta name="generator" content={Astro.generator} />
+
+<Lightbox />
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
