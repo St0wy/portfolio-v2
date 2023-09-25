@@ -2,6 +2,8 @@
 import { type CollectionEntry, getCollection } from "astro:content";
 import type { ProjectSchema } from "../../content/config";
 import ProjectLayout from "../../layouts/ProjectLayout.astro";
+import Hr from "../../components/Hr.astro";
+import MdImage from "../../components/MdImage.astro";
 
 export async function getStaticPaths() {
 	const projectEntries = await getCollection("projects");
@@ -27,5 +29,5 @@ const { Content } = await entry.render();
 	order={project.order}
 	heroImage={project.heroImage}
 >
-	<Content />
+	<Content components={{ hr: Hr, img: MdImage }} />
 </ProjectLayout>

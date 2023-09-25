@@ -6,6 +6,8 @@ heroImage: "/physics-engine/physics-engine.png"
 order: 1
 ---
 
+import Button from "../../components/Button.astro";
+
 This is a **2D physics engine** made in **C++** with no libraries.
 It was made during the physics engine module of the SAE Institute.
 It was graded **2/20** (middlesex notation, where 1 is the best grade).
@@ -23,22 +25,12 @@ You can left click to place circles and right click to place squares.
 (PS : You can't scroll with the cursor inside the demo, I don't know why. Sorry.)
 
 <div class="flex" style="margin-bottom: 1em;">
-    <a
-        href="https://stowy-physics-engine.readthedocs.io/en/latest/index.html"
-        target="_blank"
-        class="btn btn-outline ml-5"
-    >
-        Online Docs
-    </a>
-
-    <a
-        href="https://github.com/St0wy/StowyPhysicsEngine"
-        target="_blank"
-        class="btn btn-outline ml-5"
-    >
-        Github Page
-    </a>
-
+	<Button href="https://stowy-physics-engine.readthedocs.io/en/latest/index.html">
+		Online Docs
+	</Button>
+	<Button href="https://github.com/St0wy/StowyPhysicsEngine">
+		Github Page
+	</Button>
 </div>
 
 import PhysicsEngineDemo from "../../components/physics_engine/PhysicsEngineDemo.astro";
