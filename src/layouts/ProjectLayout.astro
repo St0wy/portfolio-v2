@@ -3,12 +3,17 @@ import { type ProjectSchema } from "../content/config";
 import BaseLayout from "./BaseLayout.astro";
 import dayjs from "dayjs";
 import localizedFormat from "dayjs/plugin/localizedFormat";
+import { Image } from "astro:assets";
 
 export interface Props extends ProjectSchema {}
 
 const { title, description, creationDate, heroImage } = Astro.props;
 dayjs.extend(localizedFormat);
 const displayDate = dayjs(creationDate).format("MMMM YYYY");
+
+const images = import.meta.glob(
+	"/src/assets/**/*.{jpeg,jpg,png,gif,avif,webp}"
+);
 ---
 
 <BaseLayout title={title} description={description} image={heroImage}>
@@ -17,8 +22,8 @@ const displayDate = dayjs(creationDate).format("MMMM YYYY");
 			{
 				heroImage && (
 					<div data-lightbox="true">
-						<img
-							src={heroImage}
+						<Image
+							src={images[heroImage]()}
 							alt={title}
 							class="w-full mb-6"
 						/>
