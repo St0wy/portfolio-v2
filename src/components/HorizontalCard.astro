@@ -1,5 +1,9 @@
 ---
 const { title, img, desc, url, badge, tags, target = "_blank" } = Astro.props;
+import { Picture } from "astro:assets";
+const images = import.meta.glob(
+	"/src/assets/**/*.{jpeg,jpg,png,gif,avif,webp}"
+);
 ---
 
 <div
@@ -9,10 +13,15 @@ const { title, img, desc, url, badge, tags, target = "_blank" } = Astro.props;
 		<div class="hero-content flex-col md:flex-row">
 			{
 				img && (
-					<img
-						src={img}
+					<Picture
+						src={images[img]()}
+						formats={["avif", "webp"]}
 						alt={title}
-						class="max-w-full md:max-w-[13rem] rounded-lg"
+						class:list={[
+							"max-w-full",
+							"md:max-w-[13rem]",
+							"rounded-lg",
+						]}
 					/>
 				)
 			}

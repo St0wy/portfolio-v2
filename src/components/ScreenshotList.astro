@@ -1,4 +1,6 @@
 ---
+import { Picture, Image } from "astro:assets";
+
 export interface Props {
 	screenshots?: string[];
 	containerClasses?: string;
@@ -10,6 +12,10 @@ const {
 	containerClasses = "flex flex-wrap justify-around",
 	imageClasses = "w-72",
 } = Astro.props as Props;
+
+const images = import.meta.glob(
+	"/src/assets/**/*.{jpeg,jpg,png,gif,avif,webp}"
+);
 ---
 
 <div class={containerClasses}>
@@ -18,7 +24,11 @@ const {
 			(screenshot) =>
 				screenshot && (
 					<div data-lightbox="true">
-						<img src={screenshot} class={imageClasses} />
+						<Image
+							src={images[screenshot]()}
+							alt="Screenshot of the project"
+							class={imageClasses}
+						/>
 					</div>
 				)
 		)
