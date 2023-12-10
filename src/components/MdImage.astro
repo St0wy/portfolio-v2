@@ -2,12 +2,14 @@
 const props = Astro.props;
 
 import { Image } from "astro:assets";
-
-const images = import.meta.glob(
-	"/src/assets/**/*.{jpeg,jpg,png,gif,avif,webp}"
-);
 ---
 
 <div data-lightbox="true">
-	<Image src={images[props.src]()} alt={props.alt} class="w-2/3" />
+	<Image
+		src={props.src}
+		widths={[240, 540, 720, props.src.width]}
+		sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${props.src.width}px`}
+		alt={props.alt}
+		class="w-2/3"
+	/>
 </div>

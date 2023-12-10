@@ -1,9 +1,6 @@
 ---
 const { title, img, desc, url, badge, tags, target = "_blank" } = Astro.props;
-import { Picture } from "astro:assets";
-const images = import.meta.glob(
-	"/src/assets/**/*.{jpeg,jpg,png,gif,avif,webp}"
-);
+import { Image } from "astro:assets";
 ---
 
 <div
@@ -13,9 +10,10 @@ const images = import.meta.glob(
 		<div class="hero-content flex-col md:flex-row">
 			{
 				img && (
-					<Picture
-						src={images[img]()}
-						formats={["avif", "webp"]}
+					<Image
+						src={img}
+						widths={[240, 540, 720, img.width]}
+						sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${img.width}px`}
 						alt={title}
 						class:list={[
 							"max-w-full",

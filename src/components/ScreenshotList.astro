@@ -20,17 +20,18 @@ const images = import.meta.glob(
 
 <div class={containerClasses}>
 	{
-		screenshots.map(
-			(screenshot) =>
-				screenshot && (
-					<div data-lightbox="true">
-						<Image
-							src={images[screenshot]()}
-							alt="Screenshot of the project"
-							class={imageClasses}
-						/>
-					</div>
-				)
-		)
+		screenshots.map((screenshot) => {
+			screenshot && (
+				<div data-lightbox="true">
+					<Image
+						src={images[screenshot]()}
+						widths={[240, 540, 720]}
+						sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px`}
+						alt="Screenshot of the project"
+						class={imageClasses}
+					/>
+				</div>
+			);
+		})
 	}
 </div>

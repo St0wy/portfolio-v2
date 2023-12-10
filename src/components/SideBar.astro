@@ -1,5 +1,5 @@
 ---
-import { Picture } from "astro:assets";
+import { Image } from "astro:assets";
 import profilev2 from "../assets/profilev2.jpg";
 ---
 
@@ -14,9 +14,10 @@ import profilev2 from "../assets/profilev2.jpg";
 					class="avatar transition ease-in-out w-1/2 hover:scale-[102%] block m-auto mt-3 mb-6"
 				>
 					<div>
-						<Picture
+						<Image
 							src={profilev2}
-							formats={["avif", "webp"]}
+							widths={[240, 540, 720, profilev2.width]}
+							sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${profilev2.width}px`}
 							alt="Picture of Fabian Huber (me)."
 							class:list={["mask", "mask-circle"]}
 						/>

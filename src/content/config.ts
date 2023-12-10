@@ -1,17 +1,17 @@
-import { z, defineCollection } from "astro:content";
+import { z, defineCollection, type CollectionEntry } from "astro:content";
 
-const projectSchema = z.object({
-    title: z.string(),
-    description: z.string(),
-    creationDate: z.coerce.date(),
-    order: z.number(),
-    heroImage: z.string().optional(),
+const projectCollection = defineCollection({
+    schema: ({ image }) => z.object({
+        title: z.string(),
+        description: z.string(),
+        creationDate: z.coerce.date(),
+        order: z.number(),
+        heroImage: image(),
+    })
 });
-
-export type ProjectSchema = z.infer<typeof projectSchema>;
-
-const projectCollection = defineCollection({ schema: projectSchema });
 
 export const collections = {
     'projects': projectCollection,
 }
+
+export type ProjectSchema = CollectionEntry<"projects">;

@@ -4,17 +4,24 @@ import HorizontalCard from "../../components/HorizontalCard.astro";
 import type { ProjectSchema } from "../../content/config";
 import { getCollection } from "astro:content";
 
+interface Pages {
+	data: ProjectSchema[];
+}
+
 export async function getStaticPaths({ paginate }) {
 	const projects = await getCollection("projects");
 	return paginate(projects, { pageSize: 10 });
 }
 
+interface Props {
+	page: Pages;
+}
+
 const { page } = Astro.props;
+
 page.data.sort(
-	(
-		a: { data: ProjectSchema; slug: string },
-		b: { data: ProjectSchema; slug: string }
-	) => a.data.order.valueOf() - b.data.order.valueOf()
+	(a: ProjectSchema, b: ProjectSchema) =>
+		a.data.order - b.data.order
 );
 ---
 
@@ -27,7 +34,7 @@ page.data.sort(
 		{
 			page.data
 				.sort()
-				.map((project: { data: ProjectSchema; slug: string }) => (
+				.map((project: ProjectSchema) => (
 					<>
 						<HorizontalCard
 							title={project.data.title}
