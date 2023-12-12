@@ -4,19 +4,6 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 ---
 
 <BaseLayout title="Resume">
-	<!-- <div class="mb-5">
-		<div class="text-3xl w-full font-bold">Profile</div>
-	</div> -->
-
-	<!-- <div class="mb-10 text-justify">
-		Engineer in Informatics Science with 6 years + of experience in software
-		development. Dominion of various programming languages, frameworks, CMS
-		and graphics engines. Experience in WEB design and development. Work
-		with Data Base handled systems, as well as design, normalization and
-		migration. Knowledge of work with graphic design tools for image
-		manipulation , User Interfaces design, Web sites, logos and other ones.
-	</div> -->
-
 	<div class="mb-5">
 		<div class="text-3xl w-full font-bold">Education</div>
 	</div>
@@ -25,40 +12,81 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 		<TimeLineElement
 			title="Games Programming - Bachelor"
 			subtitle="2021 to 2024 at SAE Institute, Geneva, Switzerland"
-			desc="Currently studying Games Programming at SAE Institute, specializing in game development using existing engines or by creating our own tools. Proficient in key languages such as C++ and C# within the Unity environment. Education also covers subjects like Physics Programming, Networking, Optimization, and Graphics Programming."
-		/>
+		>
+			<ul class="list-disc mx-6">
+				<li>Game creation (Unity, Unreal, C++)</li>
+				<li>Physics Programming</li>
+				<li>Networking</li>
+				<li>Optimisation</li>
+				<li>Graphics Programming</li>
+			</ul>
+		</TimeLineElement>
 		<TimeLineElement
 			title="Informatics - ES Technician Diploma"
 			subtitle="2019 to 2021 at CFPT, Geneva, Switzerland"
-			desc="Niveau : Honours and congratulation of the jury. Technician ES degree program. Strengthened skills in C#, and took courses in project management and marketing. Explored other languages/technologies, including C, Rust, React Native, and VueJS."
-		/>
+		>
+			<ul class="list-disc mx-6">
+				<li>Niveau : Honours and congratulation of the jury</li>
+				<li>Strengthened skills from CFC</li>
+				<li>C</li>
+				<li>Rust</li>
+				<li>React Native</li>
+				<li>VueJS</li>
+				<li>Project Management and Marketing</li>
+			</ul>
+		</TimeLineElement>
 		<TimeLineElement
 			title="Informatics - CFC (Apprenticeship)"
 			subtitle="2016 to 2020 at CFPT, Geneva, Switzerland"
-			desc="Full-time programming apprenticeship at CFPT. Proficient in languages/technologies: C# (POO), HTML, CSS, JavaScript, PHP, Laravel, Python, Unity, SQL and Git. Practical experience with SCRUM methodology in a software project."
-		/>
+		>
+			<ul class="list-disc mx-6">
+				<li>Basics of Programming</li>
+				<li>C#</li>
+				<li>HTML / CSS / JavaScript / PHP</li>
+				<li>Python</li>
+				<li>Git</li>
+				<li>SQL</li>
+				<li>OOP</li>
+				<li>SCRUM Methodology</li>
+			</ul>
+		</TimeLineElement>
 	</div>
 
 	<div class="mb-5">
 		<div class="text-3xl w-full font-bold">Experience</div>
 	</div>
 
-	<div class="time-line-container mb-10">
+	<div class="time-line-container grid gap-4 mb-10">
 		<TimeLineElement
 			title="Android Developper"
 			subtitle="From Feb to Oct 2022 at JE EPFL, Geneva, Switzerland"
-			desc="Individually created an Android application for predicting golf putts using React Native. Designed the interface using Figma and translated the R code to Typescript."
-		/>
+		>
+			<ul class="list-disc mx-6">
+				<li>React Native Android Application</li>
+				<li>Design on Figma</li>
+				<li>Translated R code to TypeScript</li>
+			</ul>
+		</TimeLineElement>
 		<TimeLineElement
 			title="Video Game Creation and Robotics Teaching"
 			subtitle="August 2021 at Futurekids, Geneva, Switzerland"
-			desc="Taught the basics of programming and robotics to children aged 9 to 14 during two one-week courses. Used Unreal Engine and Lego EV3 MINDSTORMS."
-		/>
+		>
+			<ul class="list-disc mx-6">
+				<li>Two one week lessons</li>
+				<li>Taught the basics of programming to children</li>
+				<li>Unreal Engine 5 and Lego EV3 MINDSTORMS</li>
+			</ul>
+		</TimeLineElement>
 		<TimeLineElement
 			title="Web Developpement - Internship"
 			subtitle="May 2020 at Thinko, Geneva, Switzerland"
-			desc="In a 3 week internship, I evaluated and integrated a planification solution in the domain of transport and logistic with Laravel."
-		/>
+		>
+			<ul class="list-disc mx-6">
+				<li>Three week internship</li>
+				<li>Web dev with Laravel</li>
+				<li>Evaluation and integration of planning solutions</li>
+			</ul>
+		</TimeLineElement>
 	</div>
 
 	<div class="mb-5">
