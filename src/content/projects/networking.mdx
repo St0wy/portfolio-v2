@@ -11,23 +11,28 @@ toolUsed: "C++"
 
 import Button from "../../components/Button.astro";
 
-During the networking module at SAE Institute, we had multiple exercices to do.
+During the **networking** module at SAE Institute, the goal was to make a **Rollback Online Game**.
+But first, we did smaller projects to learn how networking works.
 
-The first thing we had to implement was a small conversation server.
+The first thing we did was to implement was a small **chat app**.
 For this, I used [Dear ImGui](https://github.com/ocornut/imgui) for the user interface
-and [SFML](https://www.sfml-dev.org/index-fr.php) to be able to use sockets.
+and [SFML](https://www.sfml-dev.org/) to be able to use sockets.
 
 ![A small chat app.](../../assets/networking/echo-server.png)
 
-We then had to do a turn-based game.
-I decided to implement a Tic-Tac-Toe.
-In this one I also used SFML for the graphics and not online the networking.
+We then had to do a **turn-based game**.
+I decided to implement a **Tic-Tac-Toe**.
+In this one I also used SFML for the graphics and not just the networking.
 
 ![A small tic tac toe](../../assets/networking/tic-tac-toe.png)
 
 After that we started the big final project.
-The task was to develop a game using the rollback engine of our teacher.
-So I decided to redo [Atomic Ball](./atomic-ball) using SFML and by adding rollback to it.
+The task was to develop a game using the **rollback engine** of our teacher.
+So I decided to redo a jam game, [**Atomic Ball**](./atomic-ball), using SFML.
+
+To do that, I first added and modified my [**physics engine**](./physics-engine) to the project.
+This is necessary because of how rollback works.
+Then, I built the rest of the game.
 
 Using the engine was really hard, the API was really complicated and it required a lot of boilerplate code to add really simple thing.
 Also, the final game sometimes has random crashes that I wasn't able to solve.
