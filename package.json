@@ -6,7 +6,7 @@
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",
-		"build": "astro build",
+		"build": "astro check && astro build && jampack ./dist",
 		"preview": "astro preview",
 		"astro": "astro"
 	},
@@ -16,6 +16,7 @@
 		"@astrojs/rss": "^4.0.2",
 		"@astrojs/sitemap": "^3.0.4",
 		"@astrojs/tailwind": "^5.1.0",
+		"@divriots/jampack": "^0.23.2",
 		"astro": "^4.1.2",
 		"autoprefixer": "^10.4.15",
 		"daisyui": "^2.52.0",
