@@ -19,7 +19,9 @@ const displayDate = dayjs(creationDate).format("MMMM YYYY");
 
 <BaseLayout title={title} description={description} image={heroImage}>
 	<main class="md:flex md:justify-center">
-		<article class="prose prose-lg max-w-[750px] prose-img:mx-auto prose-li:m-0">
+		<article
+			class="prose prose-lg max-w-[750px] prose-img:mx-auto prose-li:m-0"
+		>
 			{
 				heroImage && (
 					<div data-lightbox="true">
@@ -27,6 +29,7 @@ const displayDate = dayjs(creationDate).format("MMMM YYYY");
 							src={heroImage}
 							alt={title}
 							class="w-full mb-6"
+							loading="eager"
 						/>
 					</div>
 				)
