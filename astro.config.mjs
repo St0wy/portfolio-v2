@@ -7,4 +7,7 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
 	site: "https://www.fabianhbr.ch",
 	integrations: [mdx(), sitemap(), tailwind()],
+	experimental: {
+		directRenderScript: true,
+	},
 });
