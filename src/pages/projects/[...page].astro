@@ -10,7 +10,7 @@ interface Pages {
 
 export async function getStaticPaths({ paginate }) {
 	const projects = await getCollection("projects");
-	return paginate(projects, { pageSize: 10 });
+	return paginate(projects, { pageSize: 15 });
 }
 
 interface Props {
